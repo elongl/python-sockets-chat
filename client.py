@@ -1,14 +1,7 @@
 import socket
-
+alias = input('Welcome, what is your name?\n>>> ')
 s = socket.socket()
-host = socket.gethostname()
-port = 12221
-
-s.connect((host, port))
-print('Connected to', host)
-
+s.connect((socket.gethostname(), 3000))
 while True:
-    z = input("Enter something for the server: ")
-    s.send(z.encode())
-    print('Waiting for response...')
-    print(s.recv(1024).decode())
+    message = input(f'{alias}: ')
+    s.send(f'{alias}: {message}'.encode())
