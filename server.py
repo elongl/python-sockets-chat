@@ -1,6 +1,7 @@
 import socket
 import threading
 
+
 class ThreadedServer:
     def __init__(self, port):
         self.socket = socket.socket()
@@ -20,6 +21,7 @@ class ThreadedServer:
             except ConnectionResetError:
                 client.close()
                 return
+
 
 if __name__ == '__main__':
     ThreadedServer(3000).listen()
