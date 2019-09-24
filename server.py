@@ -21,6 +21,7 @@ class ThreadedServer:
                 data = client.recv(1024)
                 print(data.decode())
             except ConnectionResetError:
+                print('Hate to see you leave :(')
                 client.close()
                 return
 
