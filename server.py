@@ -24,4 +24,4 @@ class ThreadedServer:
 
 
 if __name__ == '__main__':
-    ThreadedServer(3000).listen()
+    ThreadedServer(2412).listen()
